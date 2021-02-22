@@ -1,14 +1,17 @@
 ---
-layout: post
-title: test post
+layout: default
 ---
 
-I am practicing making a blog post with Jekyll Now.
+<article class="post">
+  <h1>{{ page.title }}</h1>
 
-## New Paragraph?
+  <div class="entry">
+    {{ content }}
+  </div>
 
-Hopefully this is a new paragraph
-and that might've been a linebreak.
+  <div class="date">
+    Written on {{ page.date | date: "%B %e, %Y" }}
+  </div>
 
-----
-****
+  {% include disqus.html %}
+</article>
